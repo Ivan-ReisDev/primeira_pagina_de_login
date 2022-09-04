@@ -10,6 +10,7 @@ body {
 
 fieldset {
     width: 300px;
+    max-width: 300px;
     height: 340px;
     border-radius: 15px;
     margin: auto;
@@ -19,6 +20,22 @@ fieldset {
     background-color: #272c2e;
     border: none;
     box-shadow: 9px -12px 15px #1a1a1a;
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+#modal.animar {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-fill-mode:forwards ;
+    animation-delay: .3s;
+}
+
+@keyframes slide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 legend {
@@ -28,7 +45,7 @@ legend {
 
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 8px;
     font-size: 13px;
 }
@@ -48,6 +65,7 @@ label {
     font-size: 18px;
     padding: 12px;
     border-radius: 15px;
+    box-sizing: border-box;
     border: none;
     color: white;
     background-color: #010d29;
